@@ -28,6 +28,87 @@
   color: #61dafb;
 }
 
+body {
+  position: relative;
+  background-image: url(../public/img_ex/glassesImage/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+}
+
+body::before {
+  content: "";
+  background: rgba(41, 40, 40, 0.505); /* Điều chỉnh mức độ mờ tại đây */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image img {
+  margin: 50px 100px;
+}
+
+.image .modelGlass {
+  position: relative;
+}
+
+.glassChoose {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+
+.glassDescription {
+  position: absolute;
+  top: 301px;
+  font-size: 14px;
+  animation-duration: 2s; 
+  left: 460px;
+  width: 200px;
+  background: red;
+  opacity: 0.5;
+  color: white
+}
+
+.glassList {
+  background-color: white;
+  max-width: 850px; 
+  margin: 0 auto; 
+  border: none;
+  width: 100%;
+}
+
+.glassListItems {
+  background-color: white;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.glassListItems li {
+  margin: 0;
+  padding: 0;
+}
+
+.glassListItems button {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +117,5 @@
     transform: rotate(360deg);
   }
 }
+
+
