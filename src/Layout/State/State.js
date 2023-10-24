@@ -11,7 +11,7 @@ export default class State extends Component {
     this.setState({ glass: glass, selectedGlassIndex: index });
   };
   handleChangeDesc = (glass) => {
-    this.setState({ selectedGlass: glass });
+    this.setState({ selectedGlass : glass });
   };
   renderGlassList = () => {
     return glassArr.map((item,index) => {
@@ -42,6 +42,7 @@ export default class State extends Component {
       <section>
         <div className="image row">
           <img
+            id="img0"
             className="modelGlass"
             width={200}
             src={`./img_ex/glassesImage/model.jpg`}
@@ -51,14 +52,15 @@ export default class State extends Component {
         </div>
         <div className="glassList">
           <img
+            id="img1"
             className="glassChoose"
             width={120}
             src={`../img_ex/glassesImage/v${this.state.glass}.png`}
             alt=""
           />
-          <div className="glassDescription">
+          <div>
             {this.state.selectedGlass && (
-              <div>
+              <div className="glassDescription" id="desc1">
                 <p
                   className={`${
                     this.state.selectedGlassIndex === null ||
